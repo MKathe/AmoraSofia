@@ -47,7 +47,15 @@
                     android:textColor="@color/gray_regular"
                     android:text="NO HAY LUGARES" />
             </LinearLayout>
+
         </RelativeLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/add_question"
+            android:layout_width="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="20dp"
+            android:src="@drawable/ic_action_add"
+            android:layout_height="wrap_content" />
     </FrameLayout>
     </android.support.design.widget.CoordinatorLayout>
 </com.kedrabit.amorasofia.core.ScrollChildSwipeRefreshLayout>

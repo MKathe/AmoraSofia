@@ -55,7 +55,7 @@ public class HistoryActivity extends BaseActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        toolbar.setTitle("¿A qué paises te gustaría viajar?");
+        toolbar.setTitle("Amor a Sofía");
 
         setupDrawerContent(navigationView);
 
