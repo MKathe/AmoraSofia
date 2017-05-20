@@ -15,6 +15,18 @@ public class QuestionEntity implements Serializable {
     private RespuestaEntity respuesta;
     private boolean estado;
 
+    public QuestionEntity(int id, String usuario, String curso,
+                          String pgta_texto, String pgta_img,
+                          RespuestaEntity respuesta, boolean estado) {
+        this.id = id;
+        this.usuario = usuario;
+        this.curso = curso;
+        this.pgta_texto = pgta_texto;
+        this.pgta_img = pgta_img;
+        this.respuesta = respuesta;
+        this.estado = estado;
+    }
+
     public int getId() {
         return id;
     }

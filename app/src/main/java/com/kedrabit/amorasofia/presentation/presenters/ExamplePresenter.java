@@ -3,8 +3,12 @@ package com.kedrabit.amorasofia.presentation.presenters;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
+import com.kedrabit.amorasofia.data.entity.QuestionEntity;
 import com.kedrabit.amorasofia.data.local.SessionManager;
 import com.kedrabit.amorasofia.presentation.contracts.MainContract;
+
+import java.util.ArrayList;
+
 /**
  * Created by manu on 08/08/16.
  */

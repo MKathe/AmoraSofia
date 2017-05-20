@@ -16,7 +16,9 @@ import com.kedrabit.amorasofia.R;
 import com.kedrabit.amorasofia.core.BaseActivity;
 import com.kedrabit.amorasofia.data.entity.UserEntity;
 import com.kedrabit.amorasofia.data.local.SessionManager;
+import com.kedrabit.amorasofia.presentation.adapters.AnswerAdapter;
 import com.kedrabit.amorasofia.presentation.fragments.HistoryFragment;
+import com.kedrabit.amorasofia.presentation.presenters.HistoryPresenter;
 import com.kedrabit.amorasofia.utils.ActivityUtils;
 
 /**
@@ -87,7 +89,7 @@ public class HistoryActivity extends BaseActivity {
             ActivityUtils.addFragmentToActivity(getSupportFragmentManager(),
                     fragment, R.id.body);
         }
-       // new CountriesPresenter(fragment, this);
+       new HistoryPresenter(fragment, this);
     }
 
     private void setupDrawerContent(NavigationView navigationView) {
@@ -101,10 +103,10 @@ public class HistoryActivity extends BaseActivity {
 
                         switch (menuItem.getItemId()) {
                             case R.id.action_answer:
-                                //next(OrdersActivity.this,null, OrderPreviousActivity.class, false);
+                                next(HistoryActivity.this,null, AnswerActivity.class, false);
                                 break;
                             case R.id.action_noanswer:
-                                // next(OrdersActivity.this,null, ListMenuActivity.class, false);
+                                next(HistoryActivity.this,null, NoAnswerActivity.class, false);
                                 break;
                             case R.id.action_singout:
                                 CloseSession();

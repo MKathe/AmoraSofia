@@ -7,4 +7,5 @@ import java.io.Serializable;
  */
 
 public class RespuestaEntity implements Serializable {
+
 }

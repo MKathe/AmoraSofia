@@ -19,6 +19,12 @@
         </activity>
         <activity android:name="com.kedrabit.amorasofia.presentation.activities.HistoryActivity">
         </activity>
+        <activity android:name="com.kedrabit.amorasofia.presentation.activities.AddQuestionActivity">
+        </activity>
+        <activity android:name="com.kedrabit.amorasofia.presentation.activities.AnswerActivity">
+        </activity>
+        <activity android:name="com.kedrabit.amorasofia.presentation.activities.NoAnswerActivity">
+        </activity>
         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
     </application>
 

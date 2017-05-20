@@ -14,7 +14,12 @@ import android.widget.TextView;
 
 import com.kedrabit.amorasofia.R;
 import com.kedrabit.amorasofia.core.BaseFragment;
+import com.kedrabit.amorasofia.data.entity.QuestionEntity;
 import com.kedrabit.amorasofia.presentation.contracts.AddQuestionContract;
+import com.kedrabit.amorasofia.presentation.contracts.AnswerContract;
+import com.kedrabit.amorasofia.presentation.contracts.NoAnswerContract;
+
+import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,7 +30,7 @@ import butterknife.Unbinder;
  * Created by katherine on 20/05/17.
  */
 
-public class AddQuestionFragment extends BaseFragment implements AddQuestionContract.View {
+public class NoAnswerFragment extends BaseFragment implements NoAnswerContract.View {
     @BindView(R.id.et_question)
     EditText etQuestion;
     @BindView(R.id.btn_camera)
@@ -44,7 +49,7 @@ public class AddQuestionFragment extends BaseFragment implements AddQuestionCont
     private AddQuestionContract.Presenter mPresenter;
     //private ProgressDialogCustom mProgressDialogCustom;
 
-    public AddQuestionFragment() {
+    public NoAnswerFragment() {
         // Requires empty public constructor
     }
 
@@ -55,8 +60,8 @@ public class AddQuestionFragment extends BaseFragment implements AddQuestionCont
         //mPresenter.getPlaces();
     }
 
-    public static AddQuestionFragment newInstance() {
-        return new AddQuestionFragment();
+    public static NoAnswerFragment newInstance() {
+        return new NoAnswerFragment();
     }
 
     @Override
@@ -67,7 +72,7 @@ public class AddQuestionFragment extends BaseFragment implements AddQuestionCont
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_add_question, container, false);
+        View root = inflater.inflate(R.layout.fragment_history, container, false);
         unbinder = ButterKnife.bind(this, root);
         return root;
     }
@@ -79,12 +84,8 @@ public class AddQuestionFragment extends BaseFragment implements AddQuestionCont
     }
 
     @Override
-    public void getQuestion() {
+    public void setPresenter(NoAnswerContract.Presenter presenter) {
 
-    }
-
-    @Override
-    public void setPresenter(AddQuestionContract.Presenter presenter) {
     }
 
     @Override
@@ -108,13 +109,8 @@ public class AddQuestionFragment extends BaseFragment implements AddQuestionCont
         unbinder.unbind();
     }
 
-    @OnClick({R.id.btn_camera, R.id.btn_add_question})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.btn_camera:
-                break;
-            case R.id.btn_add_question:
-                break;
-        }
+    @Override
+    public void getQuestions(ArrayList<QuestionEntity> list) {
+
     }
 }
