@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kedrabit.amorasofia.Pregunta">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_weight="1"
+                android:text="PREGUNTA"
+                android:textSize="18sp"
+                tools:layout_editor_absoluteX="162dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <LinearLayout
+                android:id="@+id/ll_usuario"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tv_titulo"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_usuario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="jalar quien pregunta"
+                    tools:layout_editor_absoluteX="34dp"
+                    tools:layout_editor_absoluteY="42dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_curso"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/ll_usuario"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_curso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="jalar que curso"
+                    tools:layout_editor_absoluteX="34dp"
+                    tools:layout_editor_absoluteY="69dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/ll_curso"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tv_pregunta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.26"
+                    android:text="jalar la pregunta" />
+
+                <ImageView
+                    android:id="@+id/im_fotografia"
+                    android:layout_width="match_parent"
+                    android:layout_height="148dp"
+                    android:layout_below="@+id/tv_pregunta"
+                    android:layout_centerHorizontal="true"
+                    app:srcCompat="@android:drawable/sym_def_app_icon"
+                    tools:layout_editor_absoluteX="62dp"
+                    tools:layout_editor_absoluteY="102dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_respuesta"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tv_respuesta"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/et_respuesta"
+                    android:layout_width="262dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_respuesta"
+                    android:layout_weight="0.66"
+                    android:ems="10"
+                    android:inputType="textMultiLine"
+                    tools:layout_editor_absoluteX="62dp"
+                    tools:layout_editor_absoluteY="289dp" />
+
+                <ImageButton
+                    android:id="@+id/ib_enviar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/checkbox_on_background"
+                    tools:layout_editor_absoluteX="317dp"
+                    tools:layout_editor_absoluteY="289dp" />
+
+                <ImageButton
+                    android:id="@+id/ib_adjuntar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/sym_contact_card"
+                    tools:layout_editor_absoluteX="277dp"
+                    tools:layout_editor_absoluteY="289dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_respuesta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_pregunta"
+                android:layout_weight="1"
+                android:text="Respuestas:"
+                tools:layout_editor_absoluteX="34dp"
+                tools:layout_editor_absoluteY="272dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

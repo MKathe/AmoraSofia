@@ -4,7 +4,7 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
     defaultConfig {
-        applicationId "com.cerezaconsulting.amorasofia"
+        applicationId "com.kedrabit.amorasofia"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -31,13 +31,13 @@ android {
         prod {
             minSdkVersion 18
             targetSdkVersion 25
-            applicationId = "com.cerezaconsulting.amorasofia"
+            applicationId = "com.kedrabit.amorasofia"
             buildConfigField 'String', 'BASE', '"http://glup.kodevianstudio.com/api/"'
         }
         mock {
             minSdkVersion 18
             targetSdkVersion 25
-            applicationId = "com.cerezaconsulting.amorasofia.test"
+            applicationId = "com.kedrabit.amorasofia.test"
             buildConfigField 'String', 'BASE', '"http://glupnew.kodevianstudio.com/api/"'
         }
     }
@@ -71,5 +71,6 @@ dependencies {
     compile helpLibraries.calligraphy
 
     compile imagesLoader.glide
+    compile facebookCore.facebook
 
 }

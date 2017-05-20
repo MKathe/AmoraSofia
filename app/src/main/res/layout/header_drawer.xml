@@ -32,7 +32,7 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/tv_state_gender"
+            android:id="@+id/tv_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Activo | Hombre"
